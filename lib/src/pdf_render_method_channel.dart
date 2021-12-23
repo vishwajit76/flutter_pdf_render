@@ -270,7 +270,7 @@ class PdfPageImageMethodChannel extends PdfPageImage {
         }();
 
     return PdfPageImageMethodChannel._(
-        pageNumber: obj['pageNumber'] as int,
+        pageNumber: obj['pageNumber'] != null ? (obj['pageNumber'] as int) : 1,
         x: obj['x'] as int,
         y: obj['y'] as int,
         width: retWidth,
