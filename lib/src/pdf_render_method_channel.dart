@@ -270,15 +270,15 @@ class PdfPageImageMethodChannel extends PdfPageImage {
         }();
 
     return PdfPageImageMethodChannel._(
-        pageNumber: obj['pageNumber'] != null ? (obj['pageNumber'] as int) : 1,
-        x: obj['x'] as int,
-        y: obj['y'] as int,
+        pageNumber: pageNumber, //obj['pageNumber'] as int,
+        x: x!, //obj['x'] as int,
+        y: y!, //obj['y'] as int,
         width: retWidth,
         height: retHeight,
-        fullWidth: obj['fullWidth'] as double,
-        fullHeight: obj['fullHeight'] as double,
-        pageWidth: obj['pageWidth'] as double,
-        pageHeight: obj['pageHeight'] as double,
+        fullWidth: fullWidth!, //obj['fullWidth'] as double,
+        fullHeight: fullHeight!, //obj['fullHeight'] as double,
+        pageWidth: width!.toDouble(), //obj['pageWidth'] as double,
+        pageHeight: height!.toDouble(), //obj['pageHeight'] as double,
         pixels: pixels,
         buffer: ptr);
   }
